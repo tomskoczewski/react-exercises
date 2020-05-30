@@ -1,8 +1,12 @@
 import React from "react";
+import ListWrapper from "./components/ListWrapper/ListWrapper";
+import "./index.css";
 import "./App.css";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => (
+  <div className="App">
+    <ListWrapper />
+  </div>
+);
 
 export default App;
