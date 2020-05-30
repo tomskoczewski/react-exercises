@@ -1,5 +1,22 @@
-.listItemWrapper {
+.listItem__wrapper {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.listItem__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.listItem__name {
+  color: #1e58ff;
+  font-weight: 700;
+}
+
+.listItem__description {
+}
+
+.listItem__button {
 }
