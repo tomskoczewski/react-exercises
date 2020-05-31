@@ -1,20 +1,28 @@
 import React from "react";
-import danAbramovImage from "../../../assets/images/danabramov.jpg";
+import PropTypes from "prop-types";
 import "./ListItem.css";
 
-const ListItem = () => (
+const ListItem = (props) => (
   <li className="listItem__wrapper">
-    <img src={danAbramovImage} alt="danabramov" className="listItem__image" />
+    <img src={props.image} alt={props.name} className="listItem__image" />
     <div>
-      <h2 className="listItem__name">Dan Abramov</h2>
-      <p className="listItem__description">
-        > It is a good idea to think of your PC as an office. It stores files,
-        programs, pictures. This can be compared to an actual office's files,
-        machines and decorations.
-      </p>
-      <button className="listItem__button">visit twitter page</button>
+      <h2 className="listItem__name">{props.name} </h2>
+      <p className="listItem__description">{props.description}</p>
+      <a className="listItem__button" href={props.twitterLink}>
+        visit twitter page
+      </a>
     </div>
   </li>
 );
+ListItem.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  twitterLink: PropTypes.string.isRequired,
+};
+
+ListItem.defaultProps = {
+  description: "One of React creators",
+};
 
 export default ListItem;
