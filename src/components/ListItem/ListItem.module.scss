@@ -33,32 +33,7 @@
   background-size: cover;
 }
 
-.listItemName {
-  margin: 0;
-  color: #1e58ff;
-  font-weight: 900;
-}
-
 .listItemDescription {
   font-weight: 400;
   margin: 10px 0 20px;
-}
-
-.listItemButton {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 7px 12px;
-  background-color: white;
-  border: 2px solid #1e58ff;
-  color: #1e58ff;
-}
-
-.listItemButton:hover {
-  background-color: #1e58ff;
-  color: white;
-}
-
-.listItemLink:visited {
-  color: #1e58ff;
 }

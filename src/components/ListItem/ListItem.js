@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./ListItem.module.scss";
+import Button from "../Button/Button";
+import Title from "../Title/Title";
 
 //Possible to destructuring instead of props i.e.const ListItem = (props) to ->
 const ListItem = ({ image, name, description, twitterLink }) => {
@@ -13,16 +15,9 @@ const ListItem = ({ image, name, description, twitterLink }) => {
         className={image ? styles.listItemImage : styles.listItemImageNone}
       />
       <div>
-        <h2 className={styles.listItemName}>{name} </h2>
+        <Title>{name}</Title>
         <p className={styles.listItemDescription}>{description}</p>
-        <a
-          target="_blank"
-          className={styles.listItemButton}
-          href={twitterLink}
-          rel="noopener noreferrer"
-        >
-          visit twitter page
-        </a>
+        <Button href={twitterLink}>visit twitter page</Button>
       </div>
     </li>
   );
