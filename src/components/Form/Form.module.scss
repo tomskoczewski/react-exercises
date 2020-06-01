@@ -1,12 +1,19 @@
 .wrapper {
   width: 50%;
   margin: 50px auto 100px;
+  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-left: solid 2px #1e58ff;
+
+  h2 {
+    margin-left: 100px;
+  }
 }
 
 form {
+  margin-left: 100px;
   width: 100%;
   max-width: 350px;
   display: flex;

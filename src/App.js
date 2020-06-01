@@ -1,8 +1,8 @@
 import React from "react";
 import ListWrapper from "./components/ListWrapper/ListWrapper";
 import "./index.css";
-import "./App.css";
 import Form from "./components/Form/Form";
+import styles from "./App.module.scss";
 
 const initialStateItems = [
   {
@@ -60,10 +60,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className={styles.row}>
         <ListWrapper items={this.state.items} />
         <Form submitFn={this.addItem} />
-      </>
+      </div>
     );
   }
 }
