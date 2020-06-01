@@ -2,32 +2,40 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./ListItem.module.scss";
 
-//Possible to destructuring instead of props i.e.const ListItem = ({image, name, description, twitterLink})
-const ListItem = (props) => (
-  <li className={styles.wrapper}>
-    <img src={props.image} alt={props.name} className={styles.listItemImage} />
-    <div>
-      <h2 className={styles.listItemName}>{props.name} </h2>
-      <p className={styles.listItemDescription}>{props.description}</p>
-      <a
-        target="_blank"
-        className={styles.listItemButton}
-        href={props.twitterLink}
-        rel="noopener noreferrer"
-      >
-        visit twitter page
-      </a>
-    </div>
-  </li>
-);
+//Possible to destructuring instead of props i.e.const ListItem = (props) to ->
+const ListItem = ({ image, name, description, twitterLink }) => {
+  const ImageTag = image ? "img" : "div";
+  return (
+    <li className={styles.wrapper}>
+      <ImageTag
+        src={image}
+        alt={name}
+        className={image ? styles.listItemImage : styles.listItemImageNone}
+      />
+      <div>
+        <h2 className={styles.listItemName}>{name} </h2>
+        <p className={styles.listItemDescription}>{description}</p>
+        <a
+          target="_blank"
+          className={styles.listItemButton}
+          href={twitterLink}
+          rel="noopener noreferrer"
+        >
+          visit twitter page
+        </a>
+      </div>
+    </li>
+  );
+};
 ListItem.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   twitterLink: PropTypes.string.isRequired,
 };
 
 ListItem.defaultProps = {
+  image: null,
   description: "One of React creators",
 };
 
