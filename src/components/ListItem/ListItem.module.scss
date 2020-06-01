@@ -17,48 +17,48 @@
   align-items: center;
   position: relative;
   animation: appear 0.5s ease;
+}
 
-  .listItemImage {
-    flex-shrink: 0;
-    margin-right: 30px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
+.listItemImage {
+  flex-shrink: 0;
+  margin-right: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
 
-  .listItemImageNone {
-    @extend .listItemImage;
-    background: url("https://unsplash.it/200/200") no-repeat;
-    background-size: cover;
-  }
+.listItemImageNone {
+  @extend .listItemImage;
+  background: url("https://unsplash.it/200/200") no-repeat;
+  background-size: cover;
+}
 
-  .listItemName {
-    margin: 0;
-    color: #1e58ff;
-    font-weight: 900;
-  }
+.listItemName {
+  margin: 0;
+  color: #1e58ff;
+  font-weight: 900;
+}
 
-  .listItemDescription {
-    font-weight: 400;
-    margin: 10px 0 20px;
-  }
+.listItemDescription {
+  font-weight: 400;
+  margin: 10px 0 20px;
+}
 
-  .listItemButton {
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 7px 12px;
-    background-color: white;
-    border: 2px solid #1e58ff;
-    color: #1e58ff;
-  }
+.listItemButton {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 12px;
+  background-color: white;
+  border: 2px solid #1e58ff;
+  color: #1e58ff;
+}
 
-  .listItemButton:hover {
-    background-color: #1e58ff;
-    color: white;
-  }
+.listItemButton:hover {
+  background-color: #1e58ff;
+  color: white;
+}
 
-  .listItemLink:visited {
-    color: #1e58ff;
-  }
+.listItemLink:visited {
+  color: #1e58ff;
 }
