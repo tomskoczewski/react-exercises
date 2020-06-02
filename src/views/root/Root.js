@@ -1,8 +1,7 @@
 import React from "react";
-import List from "./components/List/List";
-import "./index.css";
-import Form from "./components/Form/Form";
-import styles from "./App.module.scss";
+import List from "../../components/List/List";
+import Form from "../../components/Form/Form";
+import styles from "./Root.module.scss";
 
 const initialStateItems = [
   {
@@ -37,7 +36,7 @@ const initialStateItems = [
   },
 ];
 
-class App extends React.Component {
+class Root extends React.Component {
   state = {
     items: [...initialStateItems],
   };
@@ -68,4 +67,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Root;
