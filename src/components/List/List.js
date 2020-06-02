@@ -1,8 +1,8 @@
 import React from "react";
-import ListItem from "../ListItem/ListItem";
-import styles from "./ListWrapper.module.scss";
+import ListItem from "./ListItem";
+import styles from "./List.module.scss";
 
-const ListWrapper = ({ items }) => (
+const List = ({ items }) => (
   <ul className={styles.wrapper}>
     {items.map((item) => (
       <ListItem key={item.twitterLink} {...item} />
@@ -10,4 +10,4 @@ const ListWrapper = ({ items }) => (
   </ul>
 );
 
-export default ListWrapper;
+export default List;
